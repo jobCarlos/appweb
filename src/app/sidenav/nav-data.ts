@@ -1,4 +1,7 @@
-export const navbarData = [
+import { RouterLink } from "@angular/router";
+import { INavbarData } from "./helper";
+
+export const navbarData: INavbarData[] = [
     {
         routeLink: 'dashboard',
         icon: 'fa fa-home',
@@ -9,6 +12,31 @@ export const navbarData = [
         routeLink: 'gestion',
         icon: 'fal fa-box-open',
         label: 'Gestión Documental',
+        items: [
+            {
+                routeLink: 'recepcion/recepción',
+                label: 'Recepción',
+                items: [
+                    {
+                        routeLink: 'recepcion/altas',
+                        label: 'Altas',
+                    },
+                    {
+                        routeLink: 'recepcion/modificaciones',
+                        label: 'Modificaciones',
+                    },
+                    {
+                        routeLink: 'recepcion/entrega-documentos',
+                        label: 'Entrega de Documentos',
+                    },
+                    {
+                        routeLink: 'recepcion/consultas',
+                        label: 'Consultas',
+                    },
+                ]
+
+            }
+        ]
     },
 
     {

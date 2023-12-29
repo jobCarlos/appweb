@@ -11,6 +11,7 @@ import { PagesComponent } from './pages/pages.component';
 import { SettingsComponent } from './settings/settings.component';
 import { GestionComponent } from './pages/gestion/gestion.component';
 import { InstrumentosTrabajoComponent } from './pages/instrumentos-trabajo/instrumentos-trabajo.component';
+import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InstrumentosTrabajoComponent } from './pages/instrumentos-trabajo/instr
     PagesComponent,
     SettingsComponent,
     GestionComponent,
-    InstrumentosTrabajoComponent
+    InstrumentosTrabajoComponent,
+    SublevelMenuComponent
   ],
   imports: [
     BrowserModule,

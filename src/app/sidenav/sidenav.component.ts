@@ -2,6 +2,7 @@ import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/
 import { navbarData } from './nav-data';
 import { animate, style, trigger, animation,transition, keyframes } from '@angular/animations';
 import { windowCount } from 'rxjs';
+import { INavbarData } from './helper';
 
 
 
@@ -48,6 +49,7 @@ export class SidenavComponent implements OnInit {
   collapsed =false;
   screenWidth = 0;
   navData = navbarData;
+  multiple: boolean = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any){
@@ -73,4 +75,17 @@ export class SidenavComponent implements OnInit {
     this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
 
   }
+  handleClick(item: INavbarData): void {
+    if(!this.multiple){
+      for(let modelItem of this.navData){
+        if(item !== modelItem && modelItem.expanded){
+          modelItem.expanded= false;
+        }
+
+      }
+    }
+    item.expanded = !item.expanded
+  
+  }
 }
+
