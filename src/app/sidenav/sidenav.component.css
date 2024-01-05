@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: calc(100% - 3.65rem);
     cursor: pointer;
 
     .sidenav-nav-item {
@@ -94,17 +95,16 @@
 
             }
         }
-        .sidenav-nav-link:hover{
+        .sidenav-nav-link:hover {
             background-color: #fff;
             color: #000;
 
-            .menu-collapse-icon{
+            .menu-collapse-icon {
                 color: #000;
 
             }
         }
-    }
-   
+    } 
 }
 
 .active {
@@ -131,8 +131,8 @@
     list-style: none;
     margin-left: 10px;
 
-    .sublevel-nav-item{
-        .sublevel-nav-link{
+    .sublevel-nav-item {
+        .sublevel-nav-link {
             display: flex;
             align-items: center;
             height: 3rem;
@@ -148,6 +148,9 @@
                 margin: 0 0.5rem;
                 text-align: center;
             }
+            .sublevel-link-text {
+                margin-left: 0.8rem;
+            }
         }
         .sublevel-nav-link:hover {
             color: #f3f3f3;
@@ -160,9 +163,9 @@
     overflow: auto;
     visibility: hidden;
     height: calc(100% - 3.65rem);
-} */
+}
 
-/* .sidenav-nav,
+.sidenav-nav,
 .scrollwrap:hover,
 .scrollwrap:focus {
     visibility: visible;
@@ -178,9 +181,9 @@
 
 .scrollwrap::-webkit-scrollbar{
     width: 10px;
-} */
+}
 
-/* .scrollwrap::-webkit-scrollbar-track {
+.scrollwrap::-webkit-scrollbar-track {
     background: transparent;
 }
 
