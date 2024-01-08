@@ -5,14 +5,10 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 @Component({
   selector: 'app-sublevel-menu',
   template: `
-    <ul *ngIf="collapsed && data.items && data.items.length > 0"
-    [@submenu]="expanded 
-    ? {value: 'visible',
-       params: {transitionParams : '400ms cubic-bezier(0.86, 0, 0.07, 1)', height: '*'}}
-    : {value: 'hidden',
-       params: {transitionParams: '400ms cubic-bezier(0.86, 0, 0.07, 1)',height: '0'}}"
-    class="sublevel-nav"
-    >
+    <ul *ngIf="data.expanded && data.items && data.items.length > 0"
+        [@submenu]="data.expanded ? 'visible' : 'hidden'"
+        class="sublevel-nav">
+        
     <li *ngFor="let item of data.items" class="sublevel-nav-item">
     <a class="sublevel-nav-link"
     (click)="handleClick(item)"

@@ -9,9 +9,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages/pages.component';
 import { SettingsComponent } from './settings/settings.component';
-import { GestionComponent } from './pages/gestion/gestion.component';
 import { InstrumentosTrabajoComponent } from './pages/instrumentos-trabajo/instrumentos-trabajo.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import { AltasComponent } from './pages/gestion/altas/altas.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +21,11 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     DashboardComponent,
     PagesComponent,
     SettingsComponent,
-    GestionComponent,
     InstrumentosTrabajoComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    AltasComponent,
+
+
   ],
   imports: [
     BrowserModule,

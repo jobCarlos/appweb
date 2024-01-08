@@ -1,12 +1,28 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+
+<div class="top-bar">
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()">S</button>
-        <div class="logo-text" @fadeInOut *ngIf="collapsed">SIIAP</div>
-        <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
-        </button>
+        <img class="logo" src="/assets/images/logo-color-fondoBlanco.jpg" alt="Logo" (click)="toggleCollapse()">
     </div>
+    <div class="search-container">
+        <span class="search-icon">
+            <i class="fal fa-search"></i>
+        </span>
+        <input type="text" placeholder="Buscar">
+    </div>
+    <div class="user-icon">
+        <i class="fal fa-table cells"></i>
+        <i class="fal fa-user user-icon"></i>
+    </div>
+    
+    
+
+  </div>
+
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+
     <div class="scrollwrap scrollwrap_delayed"></div>
+
     <ul class="sidenav-nav">
         <li class="sidenav-nav-item" *ngFor="let data of navData">
             <a class="sidenav-nav-link" (click)="handleClick(data)"
@@ -21,7 +37,7 @@
                 ></i>
             </a>
             <a class="sidenav-nav-link"
-            *ngIf="!data.items || (data.items && data.items.length === 0)" 
+            *ngIf="!data.items || (data.items && data.items.length === 0)"
             [routerLink]="[data.routeLink]"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: true}"

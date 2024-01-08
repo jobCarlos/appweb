@@ -14,23 +14,23 @@ export const navbarData: INavbarData[] = [
         label: 'Gestión Documental',
         items: [
             {
-                routeLink: 'recepcion/recepción',
+                routeLink: 'gestion',
                 label: 'Recepción',
                 items: [
                     {
-                        routeLink: 'recepcion/altas',
+                        routeLink: 'altas',
                         label: 'Altas',
                     },
                     {
-                        routeLink: 'recepcion/modificaciones',
+                        routeLink: 'modificaciones',
                         label: 'Modificaciones',
                     },
                     {
-                        routeLink: 'recepcion/entrega-documentos',
+                        routeLink: 'entrega-documentos',
                         label: 'Entrega de Documentos',
                     },
                     {
-                        routeLink: 'recepcion/consultas',
+                        routeLink: 'consultas',
                         label: 'Consultas',
                     },
                 ]
